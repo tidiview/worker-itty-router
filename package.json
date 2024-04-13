@@ -1,5 +1,5 @@
 {
-  "name": "worker-iity-router",
+  "name": "worker-itty-router-turnstile-form",
   "version": "0.0.0",
   "private": false,
   "scripts": {
@@ -12,5 +12,8 @@
     "itty-router": "^3.0.12",
     "typescript": "^5.0.5",
     "wrangler": "^3.50.0"
+  },
+  "dependencies": {
+    "@cloudflare/pages-plugin-turnstile": "^1.0.1"
   }
 }

@@ -1,6 +1,12 @@
-name = "cloudflare-worker"
+name = "worker-itty-router-turnstile-form"
 main = "src/index.ts"
 compatibility_date = "2024-04-05"
+
+# Bind a KV Namespace. Use KV as persistent storage for small key-value pairs.
+# Docs: https://developers.cloudflare.com/workers/wrangler/configuration/#kv-namespaces
+[[kv_namespaces]]
+binding = "turnstile_itty"
+id = "b4e2fe9e96bf4c97b2d13c0918083287"
 
 # Variable bindings. These are arbitrary, plaintext strings (similar to environment variables)
 # Note: Use secrets to store sensitive data.
@@ -53,12 +59,6 @@ compatibility_date = "2024-04-05"
 # Docs: https://developers.cloudflare.com/workers/wrangler/configuration/#hyperdrive
 # [[hyperdrive]]
 # binding = "MY_HYPERDRIVE"
-# id = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-
-# Bind a KV Namespace. Use KV as persistent storage for small key-value pairs.
-# Docs: https://developers.cloudflare.com/workers/wrangler/configuration/#kv-namespaces
-# [[kv_namespaces]]
-# binding = "MY_KV_NAMESPACE"
 # id = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 
 # Bind an mTLS certificate. Use to present a client certificate when communicating with another service.

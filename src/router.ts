@@ -6,8 +6,6 @@ const router = Router();
 // GET collection index
 router.get('/api/todos', () => new Response('Todos Index!'));
 
-router.get('api/json', () => new Response('Todos Index!'))
-
 // GET item
 router.get('/api/todos/:id', ({ params }) => new Response(`Todo #${params.id}`));
 
